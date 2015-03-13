@@ -1,2 +1,5 @@
+=== 0.2.0 ===
+Added support for south migrations for backward compatibility
+
 === 0.1.0 ===
 Initial release
