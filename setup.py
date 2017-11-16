@@ -31,9 +31,12 @@ import os
 from setuptools import setup, find_packages
 import django_bnr as app
 
+
 install_requires = (
     'requests',
 )
+
+
 def read(fname):
     try:
         return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -46,10 +49,10 @@ setup(
     description=read('DESCRIPTION'),
     long_description=read('README.rst'),
     license='The MIT License',
-    platforms=('OS Independent',),
+    platforms=['OS Independent'],
     install_requires=install_requires,
     keywords='django, app, reusable, exchange rates',
-    author='PressLabs',
+    author='Presslabs',
     author_email='ping@presslabs.com',
     url="https://github.com/PressLabs/django-bnr",
     packages=find_packages(),
