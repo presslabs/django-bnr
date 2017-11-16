@@ -6,4 +6,5 @@ from django_bnr.models import Rate
 class RateAdmin(admin.ModelAdmin):
     list_display = ('rate', 'currency', 'date')
 
+
 admin.site.register(Rate, RateAdmin)

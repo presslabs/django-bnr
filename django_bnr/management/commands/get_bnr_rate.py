@@ -12,29 +12,31 @@ from django_bnr.models import CURRENCIES
 
 class Command(BaseCommand):
     help = 'Gets the BNR rate for given currency'
-    option_list = BaseCommand.option_list + (
-        make_option(
+
+    def add_arguments(self, parser):
+        parser.add_argument(
             "-c",
             "--currency",
-            type="choice",
+            type=str,
             choices=CURRENCIES,
             dest="currency",
             action="store",
             default="USD",
             help="Currency to get rate for",
-        ),
-        make_option(
+        )
+
+        # Named (optional) arguments
+        parser.add_argument(
             "-d",
             "--date",
-            type="string",
+            type=str,
             dest="date",
             action="store",
             default=datetime.date.today().strftime("%Y-%m-%d"),
             help="Date to get rate for",
-        ),
-    )
+        )
 
     def handle(self, *args, **options):
         currency = options['currency']
         date = datetime.datetime.strptime(options['date'], '%Y-%m-%d').date()
-        print get_bnr_rate(date, currency)
+        print(get_bnr_rate(date, currency))
