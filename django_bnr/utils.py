@@ -15,7 +15,7 @@ def get_bnr_rate(date, currency='USD'):
         return rate.rate
     except Rate.DoesNotExist:
         d = date.strftime('%Y-%m-%d')
-        r = requests.get('http://www.bnro.ro/nbrfxrates10days.xml')
+        r = requests.get('https://www.bnr.ro/nbrfxrates10days.xml')
         r.raise_for_status()
         rate = None
         days = 0
