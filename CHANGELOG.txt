@@ -1,3 +1,6 @@
+=== 0.4.0 ===
+The request to fetch data is now made via https, to the right domain: bnr.ro
+
 === 0.3.0 ===
 Added support for Django 1.11
 Removed South migrations
