@@ -23,7 +23,7 @@ def get_bnr_rate(date, currency='USD'):
                      "{xsd}Rate[@currency='{currency}']")
         while rate is None:
             rate = ElementTree.fromstring(r.text).find(xpath_fmt.format(
-                xsd='{http://www.bnr.ro/xsd}',
+                xsd='{https://www.bnr.ro/xsd}',
                 date=d,
                 currency=currency
             ))
