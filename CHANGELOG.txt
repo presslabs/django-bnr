@@ -1,3 +1,6 @@
+=== 0.4.2 ===
+Update rate URL
+
 === 0.4.1 ===
 Fix rate xpath in get_bnr_rate
 
